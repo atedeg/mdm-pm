@@ -1,0 +1,43 @@
+\chapter{Scoping}\label{ch:scoping}
+
+- [X] introduzione
+- [X] chi siamo
+- [X] chi sono i committenti
+- [X] richiesta del cliente
+  - [X] i loro problemi che vogliono risolvere
+- [ ] analisi del dominio (meeting fatti)
+  - [ ] event storming
+- [ ] user stories  
+- [ ] POS 
+
+
+\section{Profilo della software house}\label{sec:profilo-della-software-house}
+Atedeg è una software house che opera sul territorio cesenate. È composta da un team piuttosto affiatato di 10 persone dalle competenze più variegate, che si occupano di sviluppo software.
+
+Il core team è composto da Giacomo, Linda, Nicolas e Nicolò, quattro amici che si sono conosciuti all'università e hanno deciso, una volta terminati gli studi, di fondare la software house.
+Nel corso degli anni, il team si è arricchito di nuovi membri, che hanno portato con sé nuove idee e hanno contribuito a mantenere Atedeg un ambiente dinamico aperto all'innovazione. 
+
+Essendo una piccola software house, Atedeg non adotta una rigida suddivisione gerarchica dei ruoli. In particolare, non esiste un senior management che decida quali progetti intraprendere o meno: infatti, tali decisioni vengono prese in comune dai membri del team, che si riuniscono periodicamente per discutere di nuovi possibili progetti. In questo modo, tutti i colleghi hanno la possibilità di esprimere le proprie opinioni e di partecipare attivamente alla vita dell'azienda.
+
+All'interno di Atedeg si dà molta importanza all'arricchimento personale e professionale, e si cerca di dare a tutti gli sviluppatori la possibilità di crescere e di migliorare le proprie competenze. Per questo motivo sono incentivati lo studio e la formazione e, qualora i dipendenti ne facciano richiesta, l'azienda cerca di finanziare la loro partecipazione a conferenze di calibro internazionale. \todo[inline]{Mettere nella organizzazione delle ore il fatto che uno dei membri deve andare a una conferenza a Zurigo per tre giorni} In particolare, Linda ha avuto modo di assistere al ciclo di conferenze \href{https://dddeurope.com}{\emph{Domain Driven Design Europe}} del 2019 e da quel momento ha cercato di introdurre gradualmente nell'azienda il Domain Driven Design, che è stato adottato in due progetti conclusi con successo.
+
+\section{Profilo del committente}\label{sec:profilo-del-committente}
+Mambelli è un caseificio di Cesena a gestione familiare che si occupa di produzione e vendita di prodotti caseari. L'azienda è stata fondata nel 1972 e nel corso degli anni si è arricchita di nuove produzioni ricevendo anche diversi riconoscimenti come il premio \emph{Italian Cheese Award}. 
+Grazie alla crescente popolarità è aumentata anche la domanda di prodotti e, per poterla soddisfare, Mambelli ha deciso di migliorare il proprio sistema informativo automatizzando, laddove possibile, i diversi processi aziendali.
+
+L'azienda è gestita da Raffaella che si occupa dell'acquisto delle materie prime e della pianificazione della produzione dei formaggi. Il marito di Raffaella, Gianluca, si occupa invece dei rapporti coi clienti e della gestione degli ordini. Inoltre il caseificio assume due casari che si occupano della produzione dei formaggi e del controllo qualità dei prodotti. Infine l'azienda ha diversi dipendenti impiegati nel settore della logistica.
+
+\section{Richiesta del committente}\label{sec:richiesta-del-committente}
+L'attuale sistema informativo adottato dal caseificio Mambelli risulta inadeguato per poter gestire l'aumento nella domanda dei prodotti: molti dei processi aziendali sono infatti gestiti manualmente o su semplici fogli elettronici.
+\begin{itemize}
+  \item \textbf{Gestione degli ordini:} al momento tutti gli ordini arrivano tramite mail o, in maniera informale, tramite comunicazioni telefoniche. Gianluca impiega quindi molto tempo per raccoglierli e inserirli nel sistema informativo. Inoltre, non essendo strutturati, gli ordini non sono facilmente consultabili e non è possibile ricavare informazioni utili per la pianificazione della produzione
+  \item \textbf{Pianificazione della produzione:} la pianificazione di quali prodotti mandare in produzione viene fatta manualmente da Raffaella sulla base della sua grande esperienza nel campo. Per prendere queste decisioni Raffaella consulta un foglio elettronico che riporta alcune informazioni sugli ordini passati e su quanto è stato prodotto in precedenza. Sebbene questo metodo sia sufficiente per poter effettuare la programmazione, presenta due importanti problemi:
+  \begin{itemize}
+    \item Raffaella, grazie alla sua esperienza, è l'unica in grado di pianificare la produzione; se dovesse essere assente per qualche motivo, la produzione non potrebbe essere pianificata in maniera adeguata
+    \item Sebbene l'esperienza di Raffaella sia sufficiente per avere delle buone pianificazioni, queste potrebbero essere ottimizzate ulteriormente con il supporto di sistemi informativi più avanzati riducendo i tempi morti nell'uso dei macchinari e minimizzando gli sprechi di materie prime
+  \end{itemize}
+\end{itemize}
+\todo[inline]{Far vedere che nelle riunioni emergono ulteriori pain point: integrazione col sistema della tracciabilità, etc.}
+\todo[inline]{Possibile rischio è che i clienti non apprezzino il nuovo sistema per gli ordini, mitigazioni che possiamo adottare: 
+User Experience e incontri con persone per farglielo provare, suggerimento all'azienda di mettere sconti inizialmente per chi fa gli ordini online, NLP che estrae dalla mail il contenuto dell'ordine (questo però introduce ulteriori rischi)}
+
