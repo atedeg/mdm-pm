@@ -5,8 +5,8 @@
 - [X] chi sono i committenti
 - [X] richiesta del cliente
   - [X] i loro problemi che vogliono risolvere
-- [ ] analisi del dominio (meeting fatti)
-  - [ ] event storming
+- [X] analisi del dominio (meeting fatti)
+  - [X] event storming
 - [ ] user stories  
 - [ ] POS 
 
@@ -51,51 +51,6 @@ Linda propone quindi di effettuare una prima riunione con il committente per dis
 
 \todo[inline]{Descrizione generale dell'andamento dei meeting}
 
-
-\subsection{Prima riunione}
-\label{sec:prima-riunione}
-Lo scopo della prima riunione è stato quello di discutere la proposta del committente e permettere al core team del progetto di conoscere il dominio del caseificio. Il committente ha messo a disposizione la propria sala riunioni per tre ore per svolgere il primo incontro. 
-Su suggerimento di Linda, si è deciso di adottare la tecnica dell'\emph{Event Storming}~\cite{cit:event-storming} per condurre la riunione. 
-
-
-\subsubsection{Setup della riunione}
-\label{sec:setup-della-riunione}
-Sebbene il committente abbia fornito la sala riunioni per tutta la mattinata (dalle 9:00 alle 12:00) il team ha segnato le 9:30 come orario di inizio effettivo per avere il tempo di preparare in maniera opportuna la sala.
-Infatti, questa presenta la classica disposizione con un grande tavolo al centro circondato da sedie. Secondo Brandolini, padre dell'Event Storming, questo è un ``anti pattern'': infatti, porta i partecipanti a pensare che il meeting si svolgerà come tutte le altre (noiose) riunioni aziendali dove una persona parla e gli altri stanno seduti ad ascoltare~\cite[pp.~116-118]{cit:event-storming-book}.
-
-L'approccio dell'Event Storming vuole puntare su una forte interazione fra i diversi esperti dei settori aziendali per approfondire la conoscenza del dominio e allo stesso tempo far emergere i veri bisogni del cliente. Per ottenere questo risultato si organizza la riunione in modo da sorprendere i partecipanti incentivandoli a una partecipazione attiva.
-
-Quindi è stato appeso un grande rotolo di carta lungo tutta una parete della sala e sono stati messi a disposizione numerosi blocchetti di post-it colorati e pennarelli come mostrato in \Cref{fig:event-storming-setup}. Inoltre, il grande tavolo è stato spostato dal centro della stanza e le sedie sono state impilate per scoraggiare che i partecipanti si siedano durante la riunione diventando degli osservatori passivi.
-
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/event-storming-setup.png}
-  \caption{Preparazione per una sessione di Event Storming}
-  \label{fig:event-storming-setup}
-\end{figure}
-
-\subsubsection{Svolgimento della riunione}
-\label{sec:svolgimento-della-riunione}
-Intorno alle 9:30 è iniziata la riunione; si poteva notare che i partecipanti erano spaesati ma allo stesso tempo incuriositi dal grande rotolo di carta. 
-Linda, nel ruolo di facilitatore, ha lanciato il meeting con un breve giro di presentazioni.
-Successivamente, ha spiegato in maniera esplicita l'obiettivo della riunione in modo che fosse chiaro a tutti i partecipanti.
-\\
-
-\begin{tabularx}{.9\textwidth}{rX}
-\speak{Linda} & L'obiettivo di questo incontro è analizzare gli attuali processi aziendali del caseificio per cercare di capire come possano essere migliorati e automatizzati interagendo armonicamente fra loro e con sistemi preesistenti. All'inizio il processo potrebbe sembrarvi difficile ma vi invito a intervenire senza paura, qualunque cosa facciate sarà utile.
-\end{tabularx}
-\\
-
-La spiegazione del facilitatore è volutamente molto breve: non si vuole annoiare con una lunga descrizione ma lasciare che gli esperti di dominio inizino subito a descrivere il loro lavoro. L'importante è che il facilitatore trasmetta una sensazione di sicurezza e disponibilità ad aiutare i partecipanti.
-\\
-
-\begin{tabularx}{.9\textwidth}{rX}
-  \speak{Linda} & Vorrei che descriveste degli eventi rilevanti al vostro ambito aziendale su questi post-it arancioni e che li mettiate in ordine cronologico su questo rotolo di carta. \\
-  \speak{Raffaella} & Potresti spiegare meglio cosa intendete con ``eventi''? \\
-  \speak{Linda} & Certamente! Ti faccio un esempio concreto: lavoro nel settore degli ordini, un evento che mi interessa è quando ricevo via email un nuovo ordine\\
-  & \emph{Mentre parla, Linda scrive la frase ``Nuovo ordine ricevuto per email'' su un post-it arancione}\\
-  \speak{Raffaella} & Ah, adesso mi è chiaro... quindi un evento che mi interessa potrebbe essere ``Fatto nuovo piano di produzione''?\\
-  \speak{Linda} & Esatto! L'importante è che nel descrivere l'evento usiate sempre un verbo al passato come ha fatto Raffaella 
-\end{tabularx}
-
-\todo[inline]{Mettere il video}
+\input{chapters/scoping/prima-riunione}
+\input{chapters/scoping/seconda-riunione}
+% \input{chapters/scoping/terza-riunione}
