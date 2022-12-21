@@ -1,0 +1,100 @@
+\chapter{Ubiquitous Language}
+\label{app:ubiquitous-language}
+
+\section{Definizioni condivise}
+\begin{description}
+    \item[Cheese type] A type of cheese.
+    \item[Product] A type of cheese with its respective weight.
+    \item[Ingredient] An ingredient that may be needed by a recipe to produce a type of cheese.
+\end{description}
+
+
+\section{Milk planning}
+\begin{description}
+    \item [Processed milk] The quintals of milk processed in order to produce cheese.
+    \item [Quintals of milk] A quantity of milk expressed in quintals.
+    \item [Yield] A decimal that represents the yield of milk when producing a given cheese type: \textit{i.e.} to produce $n$ quintals of a given cheese type, $\text{yield of cheese type} \cdot n \text{quintals of milk}$ must be used.
+    \item [Recipe book] It defines, for each cheese type, the yield of milk when producing it.
+    \item [Stock] It defines, for each product, the quantity available in stock.
+    \item [Stocked quantity] A quantity of a stocked product; it may also be zero.
+    \item [Quantity] A quantity of something.
+    \item [Requested product] A product requested in a given quantity that has to be produced by the given date.
+\end{description}
+
+\section{Production planning}
+\begin{description}
+    \item [Production plan] All the products to be produced in a day.
+    \item [Product to produce] The quantity of each product to be produced.
+    \item [Missing products] The products missing from the stock in a given quantity.
+    \item [Order] A set of requested products with the quantities that have to be produced by the given date.
+    \item [Ordered product] A product requested in a given quantity.
+    \item [Cheese type ripening days] Defines how many days of ripening are needed for a given type of cheese.
+    \item [Ripening days] The number of days needed for the ripening process to be done.
+\end{description}
+
+\section{Production}
+\begin{description}
+    \item [Production plan] A production plan that specifies how many units of products need to be produced.
+    \item [Production plan item] A single line of a production plan that specifies a product and how many units of it to produce.
+    \item [Production to start] A production that needs to be started, it specifies the product to produce and the units in which it needs to be produced.
+    \item [Production in progress] A production that has already started, it specifies the product that is being produced and the units in which it is being produced.
+    \item [Ended production] A production that ended, it has a batch ID and specifies the product that was produced and in the units produced.
+    \item [Recipe book] Associates to each cheese type the recipe to produce a quintal of it.
+    \item [Recipe] A list of ingredients and the respective quintals needed to produce a quintal of a product.
+    \item [Quintals of ingredient] An ingredient and a weight in quintals.
+    \item [Cheese type ripening days] For each cheese type, associates its ripening days.
+    \item [Ripening days] The number of days a cheese type has to ripen before being ready.
+\end{description}
+
+\section{Stocking}
+\begin{description}
+    \item [Available stock] The currently available products in stock; each one is available in a certain quantity (that could also be zero if the product is out-of-stock).
+    \item [Desired stock] The desired quantity of each product that should always be in stock in order to have a safe margin to keep order fulfillment going.
+    \item [Available quantity] The quantity in stock of a certain product.
+    \item [Desired quantity] The desired quantity of a certain product to be in stock.
+    \item [Missing quantity] The required quantity of a certain product to reach the desired stock level.
+    \item [Batch] A batch of products of a certain type, uniquely identified by an ID, which hasn't been quality assured.
+    \item [Quality assured batch] A batch of products of a certain type uniquely identified by an ID, which has undergone quality assurance.
+    \item [Labelled product] A product with its respective quantity and the ID of the batch it belongs to.
+\end{description}
+
+\section{Restocking}
+\begin{description}
+    \item[Stock] Defines for each ingredient the quantity in stock.
+    \item[Stocked milk] Quintals of stocked milk.
+    \item[Quintals of ingredient] An ingredient and a weight in quintals.
+    \item[Quintals of milk] A quantity of milk expressed in quintals.
+\end{description}
+
+\section{Client Orders}
+
+\begin{description}
+    \item[Incoming order] A set of order lines with their respective quantity (e.g. 1000 ricotte of 0.5kg, 50 squacqueroni of 1 kg), it also contains data about the client, an expected delivery date and the delivery location.
+    \item[Incoming order line] A product with its ordered quantity.
+    \item[Client] A physical or legal entity that places orders.
+    \item[Location] The location where an order has to be shipped to.
+    \item[Priced order] An order where each line has an associated price and, optionally, an applied discount. It also has the total price. Its structure resembles the incoming order's with the difference that each line has been priced.
+    \item[Priced order line] A product with its quantity and a price.
+    \item[In progress order] An order that is being fulfilled by an operator. Its structure resembles the priced order's with the difference that each line can specify whether it is fulfilled or not.
+    \item[In progress order line] A product with its quantity and a price. It may be in two different states: complete if the product has already been palletized and is ready in the required quantity; incomplete if the product is not present in the required quantity.
+    \item[Completed order] An order that has been fulfilled by the operator and is ready to be shipped.
+    \item[Complete order line] A product with its quantity, a price.
+    \item[Transport document] A document that has to specify: a delivery location, a shipping location, the client's info, the shipping date, the total weight of the pallet, and a list of transport document lines.
+    \item[Transport document line] A product with its respective shipped quantity. 
+\end{description}
+
+\section{Pricing}
+
+\begin{description}
+    \item[Incoming order line] A product with its ordered quantity.
+    \item[Quantity] A quantity of something.
+    \item[Price list] Associates to each product its unitary price.
+    \item[Price in euro cents] A price expressed in cents, the smallest currency unit for euros.
+    \item[Client] A physical or legal entity that places order lines.
+    \item[Client ID] An ID which uniquely identifies a client.
+    \item[Promotion] A promotion for a client, with an expiry date, containing promotion lines for some products.
+    \item[Fixed promotion line]	This promotion line specifies the discounted product and how much to discount it by.Every order line which contains the product is discounted by the specified amount.
+    \item[Threshold promotion line] This promotion line specifies the discounted product, the threshold and how much to discount it by. Only the products above the threshold are discounted; the other ones are at full price.
+    \item[Threshold quantity] A threshold under which the discount does not apply.
+    \item[Discount percentage] A discount percentage, expressed as a number between 0 (exclusive) and 100 (inclusive).
+\end{description}

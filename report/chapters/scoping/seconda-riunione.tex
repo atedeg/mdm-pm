@@ -3,9 +3,77 @@
 
 - [ ] divisione in bounded contexts
 - [ ] user stories
-- [ ] scelta del PMLM (+ giustificazione)
-- [ ] scelta del framework di test
+- [ ] scelta del PMLC (+ giustificazione)
 
+Lo scopo della seconda riunione è stato definire i \emph{bounded context} e il loro \emph{ubiquitous language} nei quali si suddivide l'azienda e stabilire i requisiti del sistema. Inoltre, avendo chiarito la stabilità dei requisiti, il team ha potuto scegliere il \emph{project management lifecycle model} più adatto per gestire il progetto.
+
+\subsubsection{Partecipanti}
+\label{sec:seconda-riunione-partecipanti}
+\begin{itemize}
+  \item Linda (facilitatore)
+  \item Giacomo, Nicolò e Nicolas (membri del core team)
+  \item Raffaella (proprietaria del caseificio e responsabile pianificazione)
+  \item Gianluca (responsabile ordini e addetto vendite)
+  \item Simone (casaro e responsabile produzione)
+  \item Luisa (responsabile magazzino)
+\end{itemize}
+
+\subsubsection{Kick off}
+\label{sec:seconda-riunione-kick-off}
+La seconda riunione è iniziata con un breve riepilogo di quanto discusso nella prima.
+In particolare il team di Atedeg ha riappeso il cartellone con i post-it del dominio da utilizzare come guida per la discussione ed evidenziare i principali punti critici emersi precedentemente.
+
+Inoltre viene spiegato l'obiettivo della riunione ai partecipanti, che è quello di definire in maniera chiara i bounded context e i requisiti del sistema.
+
+\subsubsection{Suddivisione in bounded contexts}
+\label{sec:seconda-riunione-svolgimento}
+
+\begin{tabularx}{.9\textwidth}{rX}
+  \speak{Linda} & Molto bene, iniziamo col suddividere il dominio che è emerso in bounded context. \\
+  \speak{Raffaella} & Cosa intendete con ``bounded context''? \\
+  \speak{Linda} & Essenzialmente un bounded context è una parte dell'azienda che ha un obiettivo preciso e collabora con altre parti per portare a compimento i processi aziendali. Per fare un esempio, il reparto di gestione ordini rappresenta un bounded context a sé stante. \\
+  \speak{Raffaella} & Quindi anche la mia parte di definizione della pianificazione è un bounded context?\\
+  \speak{Linda} & Sì, il suo obiettivo è quello di realizzare un piano della produzione da fornire a Simone. \\
+  \speak{Simone} & Quindi direi che anche il mio reparto della produzione è un bounded context. \\
+  \speak{Linda} & Esatto! \\
+\end{tabularx}
+\\
+
+Mano a mano che i bounded context vengono individuati, si disegna un grande cerchio attorno ai post-it che li riguardano. Il documento finale ottenuto -- il cartellone con evidenziati i bounded context -- è mostrato in \Cref{app:cartellone-event-storming-bc}.
+
+\subsubsection{Definizione dello ubiquitous language}
+\label{sec:seconda-riunione-ubiquitous-language}
+Una volta stabiliti i bounded context aziendali, per ciascuno è necessario definire lo \emph{ubiquitous language}. Essenzialmente, rappresenta un corpus di termini che costituiscono il linguaggio comune utilizzato fra esperti di quel dominio per parlare.
+
+Nell'approccio DDD è fondamentale definire lo ubiquitous language il prima possibile -- quindi già dalle prime riunioni -- per permettere agli sviluppatori di avere una visione chiara del dominio e di come esso è suddiviso.
+
+Il documento contenente lo ubiquitous language è mostrato in \Cref{app:ubiquitous-language}.
+
+\subsubsection{Definizione dei requisiti}
+Il cartellone evidenzia già alcuni punti critici che rappresentano i veri bisogni del committente:
+\begin{itemize}
+  \item Avere un sistema per automatizzare la realizzazione del piano di produzione
+  \item Avere un sistema automatico per la raccolta e gestione degli ordini
+  \item Migliorare l'integrazione con il preesistente sistema della tracciabilità. Quest'ultimo punto non appariva esplicitamente nelle richieste del committente ma è emerso durante la fase di event storming; infatti, Gianluca ha più volte sottolineato come fosse importante migliorare questo aspetto
+\end{itemize}
+
+Dalla discussione con i committenti è emerso come i requisiti potrebbero cambiare:
+\begin{itemize}
+  \item Nella discussione è emerso come Gianluca fosse preoccupato da una nuova normativa europea sulla gestione dei dati personali dei clienti nei documenti di trasporto. È un rischio concreto che la gestione dei documenti di trasporto nel bounded context degli ordini debba essere modificata durante il progetto
+  \item Raffaella ha accennato al fatto che potrebbe essere aggiunta una nuova linea di prodotti in occasione dei 50 anni di attività del caseificio. Questo cambiamento comporterebbe una modifica di diversi processi aziendali che dovrebbe essere rispecchiata nel codice del sistema
+\end{itemize}
+
+\subsubsection{Scelta del modello di PMLC}
+\label{sec:seconda-riunione-pmlc}
+
+\todo{ReD per Machine learning, requisiti mutevoli come detto prima e grande disponibilità del committente a fare riunioni settimanali e sganciare i soldoni}
+
+
+\subsubsection{Conclusione}
+\label{sec:seconda-riunione-conclusione}
+
+
+%%%%%%%%%%%%%%
 Terza riunione
 - [ ] POS
   - [ ] Acceptance criteria
