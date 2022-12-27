@@ -1,16 +1,5 @@
 \chapter{Scoping}\label{ch:scoping}
 
-- [X] introduzione
-- [X] chi siamo
-- [X] chi sono i committenti
-- [X] richiesta del cliente
-  - [X] i loro problemi che vogliono risolvere
-- [X] analisi del dominio (meeting fatti)
-  - [X] event storming
-- [ ] user stories  
-- [ ] POS 
-
-
 \section{Profilo della software house}\label{sec:profilo-della-software-house}
 Atedeg è una software house che opera sul territorio cesenate. È composta da un team piuttosto affiatato di 10 persone dalle competenze più variegate, che si occupano di sviluppo software.
 
@@ -24,6 +13,8 @@ All'interno di Atedeg si dà molta importanza all'arricchimento personale e prof
 \section{Profilo del committente}\label{sec:profilo-del-committente}
 Mambelli è un caseificio di Cesena a gestione familiare che si occupa di produzione e vendita di prodotti caseari. L'azienda è stata fondata nel 1972 e nel corso degli anni si è arricchita di nuove produzioni ricevendo anche diversi riconoscimenti come il premio \emph{Italian Cheese Award}. 
 Grazie alla crescente popolarità è aumentata anche la domanda di prodotti e, per poterla soddisfare, Mambelli ha deciso di migliorare il proprio sistema informativo automatizzando i diversi processi aziendali laddove possibile.
+
+Il nuovo sistema deve essere pronto entro settembre per poter essere utilizzato appieno nella gestione del grande flusso di ordini che si verifica intorno al periodo natalizio.
 
 L'azienda è gestita da Raffaella che si occupa dell'acquisto delle materie prime e della pianificazione della produzione dei formaggi. Il marito di Raffaella, Gianluca, si occupa invece dei rapporti coi clienti e della gestione degli ordini. Inoltre il caseificio assume due casari che si occupano della produzione dei formaggi e del controllo qualità dei prodotti. Infine l'azienda ha diversi dipendenti impiegati nel settore della logistica.
 
@@ -39,7 +30,6 @@ L'attuale sistema informativo adottato dal caseificio Mambelli risulta inadeguat
   \item \textbf{Integrazione con sistemi preesistenti:} il caseificio Mambelli utilizza altri moduli software per gestire la tracciabilità dei prodotti e lo stoccaggio delle merci; per questo motivo è fondamentale che qualunque sistema realizzato possa essere integrato con questi sistemi
 \end{itemize}
 \todo[inline]{Far vedere che ci sono state le lezioncine di aggiornamento e che hanno portato a un leggero ritardo nella prima settimana}
-\todo[inline]{Far vedere che nelle riunioni emergono ulteriori pain point: integrazione col sistema della tracciabilità, etc.}
 \todo[inline]{Possibile rischio è che i clienti non apprezzino il nuovo sistema per gli ordini, mitigazioni che possiamo adottare: 
 User Experience e incontri con persone per farglielo provare, suggerimento all'azienda di mettere sconti inizialmente per chi fa gli ordini online, NLP che estrae dalla mail il contenuto dell'ordine (questo però introduce ulteriori rischi)}
 
@@ -49,8 +39,7 @@ User Experience e incontri con persone per farglielo provare, suggerimento all'a
 Il team di Atedeg ha valutato se prendere in considerazione o meno la proposta fatta dal caseificio. Dalla descrizione dei bisogni del committente riportata alla sezione precedente, emerge come il dominio del problema sia piuttosto ampio: infatti sarebbe richiesta la realizzazione di un sistema per la gestione degli ordini dei clienti che si possa integrare con altri sistemi eventualmente adottati. Inoltre, il secondo punto delle richieste potrebbe necessitare la realizzazione di un sistema di supporto alle decisioni con una profonda conoscenza del dominio del caseificio.
 Linda propone quindi di effettuare una prima riunione con il committente per discutere la proposta adottando una metodologia improntata sul Domain Driven Design; infatti, questo approccio risulta ideale per domini aziendali simili ed è già stato utilizzato con successo dal team.
 
-\todo[inline]{Descrizione generale dell'andamento dei meeting}
-
 \input{chapters/scoping/prima-riunione}
 \input{chapters/scoping/seconda-riunione}
-% \input{chapters/scoping/terza-riunione}
+\input{chapters/scoping/terza-riunione}
+\input{chapters/scoping/quarta-riunione}

@@ -1,11 +1,7 @@
 \subsection{Seconda riunione}
 \label{sec:seconda-riunione}
 
-- [ ] divisione in bounded contexts
-- [ ] user stories
-- [ ] scelta del PMLC (+ giustificazione)
-
-Lo scopo della seconda riunione è stato definire i \emph{bounded context} e il loro \emph{ubiquitous language} nei quali si suddivide l'azienda e stabilire i requisiti del sistema. Inoltre, avendo chiarito la stabilità dei requisiti, il team ha potuto scegliere il \emph{project management lifecycle model} più adatto per gestire il progetto.
+Lo scopo della seconda riunione è stato definire i \emph{bounded context} nei quali si suddivide l'azienda, i loro \emph{ubiquitous language} e stabilire i requisiti del sistema. Inoltre, avendo chiarito la stabilità dei requisiti, il team ha potuto scegliere il \emph{project management lifecycle model} più adatto per gestire il progetto.
 
 \subsubsection{Partecipanti}
 \label{sec:seconda-riunione-partecipanti}
@@ -37,7 +33,6 @@ Inoltre viene spiegato l'obiettivo della riunione ai partecipanti, che è quello
   \speak{Simone} & Quindi direi che anche il mio reparto della produzione è un bounded context. \\
   \speak{Linda} & Esatto! \\
 \end{tabularx}
-\\
 
 Mano a mano che i bounded context vengono individuati, si disegna un grande cerchio attorno ai post-it che li riguardano. Il documento finale ottenuto -- il cartellone con evidenziati i bounded context -- è mostrato in \Cref{app:cartellone-event-storming-bc}.
 
@@ -65,16 +60,11 @@ Dalla discussione con i committenti è emerso come i requisiti potrebbero cambia
 
 \subsubsection{Scelta del modello di PMLC}
 \label{sec:seconda-riunione-pmlc}
+Come evidenziato in precedenza, i requisiti potrebbero cambiare durante lo svolgimento del progetto. I fattori di rischio non provengono solo dall'esterno -- come la normativa europea sulla gestione dei dati personali -- ma anche dalla possibilità di cambiamenti nella linea produttiva dell'azienda.
+Poiché l'approccio di DDD richiede che cambiamenti nei processi aziendali vengano rispecchiati nel codice, tale modifica si ripercuoterebbe sul team di sviluppo che dovrebbe adattare la soluzione al nuovo modello.
 
-\todo{ReD per Machine learning, requisiti mutevoli come detto prima e grande disponibilità del committente a fare riunioni settimanali e sganciare i soldoni}
+Inoltre, un ulteriore aspetto di complessità sta nella parte dedicata all'automazione della pianificazione. Infatti, un sistema del genere dovrebbe adottare euristiche apposite o ricorrere a meccanismi di machine learning; qualunque sia la scelta finale è necessario un periodo di ricerca e sperimentazione per capire quale possa essere l'approccio più indicato e che risultati si possono ottenere. 
 
+Infine, i committenti si sono mostrati disponibili a fare riunioni periodiche per discutere del progetto e per fornire feedback. 
 
-\subsubsection{Conclusione}
-\label{sec:seconda-riunione-conclusione}
-
-
-%%%%%%%%%%%%%%
-Terza riunione
-- [ ] POS
-  - [ ] Acceptance criteria
-  - [ ] Condition of Satisfaction 
+Questi aspetti hanno portato il team di sviluppo a scegliere di adottare una metodologia Agile. In particolare, il team ha scelto di adottare il framework \emph{Scrum} per gestire il progetto ricorrendo a sprint bisettimanali.

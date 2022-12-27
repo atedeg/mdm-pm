@@ -1,0 +1,181 @@
+\chapter{User Stories}
+\label{app:user-stories}
+
+
+\section{Production Planning}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Production plan generation}} \\
+  \midrule
+  \textbf{As} & Raffaella \\
+  \textbf{I want to} & automatically generate a production plan for the day \\
+  \textbf{so that} & I can optimize the usage of the cheese-making machines during the day \\
+  \midrule
+  \textbf{CoS} & The production plan is adequate to fulfil all the orders on time \\
+  & The machines are idle for at most 15\% of the time \\
+  \bottomrule
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Production plan display}} \\
+  \midrule
+  \textbf{As} & Raffaella \\
+  \textbf{I want to} & view the current production plan \\
+  \textbf{so that} & I know what was generated \\
+  \midrule
+  \textbf{CoS} & The interface is easy to use and understand according to the Nielsen Heuristics~\cite{cit:nielsen} \\
+  \bottomrule
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Production plan editing}} \\
+  \midrule
+  \textbf{As} & Raffaella \\
+  \textbf{I want to} & edit the generated production plan for the day \\
+  \textbf{so that} & I can take into account exceptional situations that may arise during the day \\
+  \midrule
+  \textbf{CoS} & The production plan can be edited before being approved for production \\
+  \bottomrule
+\end{tabularx}
+
+\section{Client Orders}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Automatic pricing}} \\
+  \midrule
+  \textbf{As} & an operator \\
+  \textbf{I want} & the system to automatically price incoming orders \\
+  \textbf{so that} & I don't have to do it manually flipping through the price list \\
+  \midrule
+  \textbf{CoS} & The system automatically prices incoming orders using a digital version of the currently used price list \\
+  \bottomrule
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Automatic palletization}} \\
+  \midrule
+  \textbf{As} & an operator \\
+  \textbf{I want} & palletize a product for an order \\
+  \textbf{so that} & I can set aside a product for a client's order \\
+  \midrule
+  \textbf{CoS} & The operator can scan the product's barcode with an handheld device to mark it as palletized and update the stocking \\
+  \bottomrule
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Integration with traceability system}} \\
+  \midrule
+  \textbf{As} & an operator \\
+  \textbf{I want} & to automatically add the product's information to the traceability system when I add it to an order \\
+  \textbf{so that} & I don't have to do it manually \\
+  \midrule
+  \textbf{CoS} & The system automatically adds the product's information to the traceability system when its code is scanned to add it to an order \\
+  \bottomrule
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Order completion}} \\
+  \midrule
+  \textbf{As} & an operator \\
+  \textbf{I want} & mark an order as complete and ready to be shipped \\
+  \textbf{so that} & it can be shipped to the customer \\
+  \midrule
+  \textbf{CoS} & The operator can mark an order as complete with a handheld device \\
+  \bottomrule
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Automatic transport document generation}} \\
+  \midrule
+  \textbf{As} & an operator \\
+  \textbf{I want to} & automatically generate a transport document for an order ready to be shipped \\
+  \textbf{so that} & I don't have to do it manually \\
+  \midrule
+  \textbf{CoS} & The system automatically gathers information about the products in an order's pallet and allows the operator to print a transport document by scanning the pallet's id \\
+  \bottomrule
+\end{tabularx}
+
+\subsection{Epic: Online Order Placing}
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Online catalogue}} \\
+  \midrule
+  \textbf{As} & a customer \\
+  \textbf{I want to} & browse an online catalogue of all available products \\
+  \textbf{so that} & I can choose what to buy \\
+  \midrule
+  \textbf{CoS} & There is an online catalogue with all available products \\
+  \bottomrule
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Online shopping cart}} \\
+  \midrule
+  \textbf{As} & a customer \\
+  \textbf{I want to} & put the cheeses I want in a shopping cart \\
+  \textbf{so that} & I can make an online order \\
+  \midrule
+  \textbf{CoS} & The website allows to put products in a cart for an order \\
+  \bottomrule
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Online order placing}} \\
+  \midrule
+  \textbf{As} & a customer \\
+  \textbf{I want to} & order all the products in my cart \\
+  \textbf{so that} & I can buy cheese \\
+  \midrule
+  \textbf{CoS} & There is a checkout button to order the products in my cart \\
+  \bottomrule
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Multiple payment methods}} \\
+  \midrule
+  \textbf{As} & a customer \\
+  \textbf{I want} & to be able to pay my order with different methods \\
+  \textbf{so that} & I can choose the most convenient one \\
+  \midrule
+  \textbf{CoS} & A customer can pay with wire transfer \\
+  & A customer can pay with cash on delivery \\
+  & A customer can pay with credit card \\
+  \bottomrule
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Website user experience}} \\
+  \midrule
+  \textbf{As} & a customer \\
+  \textbf{I want} & the website to be easy to use and understand \\
+  \textbf{so that} & it's not difficult to place orders \\
+  \midrule
+  \textbf{CoS} & The website respects the Nielsen Heuristics \\
+  & At least 90\% of the end users that tested the website mockup rated the experience as positive \\
+  \bottomrule
+\end{tabularx}
+
+\section{Stocking}
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Automatic stock counting}} \\
+  \midrule
+  \textbf{As} & an operator \\
+  \textbf{I want} & to see the stock levels of each product \\
+  \textbf{so that} & I know which products are available \\
+  \midrule
+  \textbf{CoS} & The system automatically keeps track of the products availability and updates the stocking levels when a product is shipped to a customer \\
+  \bottomrule
+\end{tabularx}
