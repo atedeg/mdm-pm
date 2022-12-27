@@ -1,181 +1,180 @@
 \chapter{User Stories}
 \label{app:user-stories}
 
+\section{Pianificazione della produzione}
 
-\section{Production Planning}
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\multicolumn{2}{l}{\textbf{Generazione del piano di produzione}} \\
+\midrule
+\textbf{In quanto} & Raffaella \\
+\textbf{vorrei} & generare automaticamente un piano di produzione per il giorno \\
+\textbf{così da} & ottimizzare l'utilizzo delle macchine per la produzione di formaggio durante la giornata \\
+\midrule
+\textbf{CoS} & Il piano di produzione è adeguato per soddisfare tutti gli ordini in tempo \\
+& Le macchine sono inattive per al massimo il 15\% del tempo \\
+\bottomrule
+\end{tabularx}
 
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Production plan generation}} \\
+  \multicolumn{2}{l}{\textbf{Visualizzazione del piano di produzione}} \\
   \midrule
-  \textbf{As} & Raffaella \\
-  \textbf{I want to} & automatically generate a production plan for the day \\
-  \textbf{so that} & I can optimize the usage of the cheese-making machines during the day \\
+  \textbf{In quanto} & Raffaella \\
+  \textbf{vorrei} & visualizzare il piano di produzione attuale \\
+  \textbf{così da} & conoscere ciò che è stato generato \\
   \midrule
-  \textbf{CoS} & The production plan is adequate to fulfil all the orders on time \\
-  & The machines are idle for at most 15\% of the time \\
+  \textbf{CoS} & L'interfaccia è facile da usare e comprendere secondo le Euristiche di Nielsen~\cite{cit:nielsen} \\
   \bottomrule
 \end{tabularx}
 
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Production plan display}} \\
+  \multicolumn{2}{l}{\textbf{Modifica del piano di produzione}} \\
   \midrule
-  \textbf{As} & Raffaella \\
-  \textbf{I want to} & view the current production plan \\
-  \textbf{so that} & I know what was generated \\
+  \textbf{In quanto} & Raffaella \\
+  \textbf{vorrei} & modificare il piano di produzione generato per il giorno \\
+  \textbf{così da} & tenere conto di situazioni eccezionali che potrebbero verificarsi durante la giornata \\
   \midrule
-  \textbf{CoS} & The interface is easy to use and understand according to the Nielsen Heuristics~\cite{cit:nielsen} \\
+  \textbf{CoS} & Il piano di produzione può essere modificato prima di essere approvato per la produzione \\
+  \bottomrule
+\end{tabularx}
+
+\section{Ordini dei clienti}
+
+\begin{tabularx}{\textwidth}{lX}
+  \toprule
+  \multicolumn{2}{l}{\textbf{Prezzatura automatica}} \\
+  \midrule
+  \textbf{In quanto} & magazziniere \\
+  \textbf{vorrei} & che il sistema calcolasse automaticamente i prezzi degli ordini in entrata \\
+  \textbf{così da} & evitare di doverlo fare manualmente sfogliando l'elenco dei prezzi \\
+  \midrule
+  \textbf{CoS} & Il sistema calcola automaticamente i prezzi degli ordini in entrata utilizzando una versione digitale del listino prezzi attualmente in uso \\
   \bottomrule
 \end{tabularx}
 
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Production plan editing}} \\
+  \multicolumn{2}{l}{\textbf{Pallettizzazione automatica}} \\
   \midrule
-  \textbf{As} & Raffaella \\
-  \textbf{I want to} & edit the generated production plan for the day \\
-  \textbf{so that} & I can take into account exceptional situations that may arise during the day \\
+  \textbf{In quanto} & magazziniere \\
+  \textbf{vorrei} & pallettizzare un prodotto per un ordine \\
+  \textbf{così da} & poter mettere da parte un prodotto per l'ordine di un cliente \\
   \midrule
-  \textbf{CoS} & The production plan can be edited before being approved for production \\
-  \bottomrule
-\end{tabularx}
-
-\section{Client Orders}
-
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Automatic pricing}} \\
-  \midrule
-  \textbf{As} & an operator \\
-  \textbf{I want} & the system to automatically price incoming orders \\
-  \textbf{so that} & I don't have to do it manually flipping through the price list \\
-  \midrule
-  \textbf{CoS} & The system automatically prices incoming orders using a digital version of the currently used price list \\
+  \textbf{CoS} & Il magazziniere può scansionare il codice a barre del prodotto con un palmare per contrassegnarlo come pallettizzato e aggiornare le forniture del magazzino \\
   \bottomrule
 \end{tabularx}
 
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Automatic palletization}} \\
+  \multicolumn{2}{l}{\textbf{Integrazione con il sistema di tracciabilità}} \\
   \midrule
-  \textbf{As} & an operator \\
-  \textbf{I want} & palletize a product for an order \\
-  \textbf{so that} & I can set aside a product for a client's order \\
+  \textbf{In quanto} & magazziniere \\
+  \textbf{vorrei} & aggiungere automaticamente le informazioni del prodotto al sistema di tracciabilità quando lo pallettizzo per un ordine \\
+  \textbf{così da} & evitare di doverlo fare manualmente \\
   \midrule
-  \textbf{CoS} & The operator can scan the product's barcode with an handheld device to mark it as palletized and update the stocking \\
+  \textbf{CoS} & Il sistema aggiunge automaticamente le informazioni del prodotto al sistema di tracciabilità quando viene scansionato il suo codice per aggiungerlo a un ordine \\
   \bottomrule
 \end{tabularx}
 
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Integration with traceability system}} \\
+  \multicolumn{2}{l}{\textbf{Completare un ordine}} \\
   \midrule
-  \textbf{As} & an operator \\
-  \textbf{I want} & to automatically add the product's information to the traceability system when I add it to an order \\
-  \textbf{so that} & I don't have to do it manually \\
+  \textbf{In quanto} & magazziniere \\
+  \textbf{vorrei} & poter segnare un ordine come completo e pronto per essere spedito \\
+  \textbf{così da} & poterlo spedire al cliente \\
   \midrule
-  \textbf{CoS} & The system automatically adds the product's information to the traceability system when its code is scanned to add it to an order \\
+  \textbf{CoS} & L'operatore può segnare un ordine come completo sfruttando un palmare \\
   \bottomrule
 \end{tabularx}
 
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Order completion}} \\
+  \multicolumn{2}{l}{\textbf{Generazione automatica del DDT}} \\
   \midrule
-  \textbf{As} & an operator \\
-  \textbf{I want} & mark an order as complete and ready to be shipped \\
-  \textbf{so that} & it can be shipped to the customer \\
+  \textbf{In quanto} & magazziniere \\
+  \textbf{vorrei} & generare automaticamente un DDT per un ordine che è pronto per essere spedito \\
+  \textbf{così da} & non doverlo fare manualmente \\
   \midrule
-  \textbf{CoS} & The operator can mark an order as complete with a handheld device \\
-  \bottomrule
-\end{tabularx}
-
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Automatic transport document generation}} \\
-  \midrule
-  \textbf{As} & an operator \\
-  \textbf{I want to} & automatically generate a transport document for an order ready to be shipped \\
-  \textbf{so that} & I don't have to do it manually \\
-  \midrule
-  \textbf{CoS} & The system automatically gathers information about the products in an order's pallet and allows the operator to print a transport document by scanning the pallet's id \\
+  \textbf{CoS} & Il sistema raccoglie automaticamente informazioni sui prodotti contenuti nel pallet dell'ordine e permette di stampare il DDT scansionando l'ID del pallet con un tablet \\
   \bottomrule
 \end{tabularx}
 
 \subsection{Epic: Online Order Placing}
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Online catalogue}} \\
+  \multicolumn{2}{l}{\textbf{Catalogo online}} \\
   \midrule
-  \textbf{As} & a customer \\
-  \textbf{I want to} & browse an online catalogue of all available products \\
-  \textbf{so that} & I can choose what to buy \\
+  \textbf{In quanto} & cliente \\
+  \textbf{vorrei} & sfogliare un catalogo online di tutti i prodotti disponibili \\
+  \textbf{così da} & scegliere cosa comprare \\
   \midrule
-  \textbf{CoS} & There is an online catalogue with all available products \\
+  \textbf{CoS} & C'è un sito web con un catalogo di tutti i prodotti disponibili \\
   \bottomrule
 \end{tabularx}
 
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Online shopping cart}} \\
+  \multicolumn{2}{l}{\textbf{Carrello per gli acquisti online}} \\
   \midrule
-  \textbf{As} & a customer \\
-  \textbf{I want to} & put the cheeses I want in a shopping cart \\
-  \textbf{so that} & I can make an online order \\
+  \textbf{In quanto} & cliente \\
+  \textbf{vorrei} & mettere i formaggi a cui sono interessato in un carrello \\
+  \textbf{così da} & poterli ordinare online \\
   \midrule
-  \textbf{CoS} & The website allows to put products in a cart for an order \\
+  \textbf{CoS} & Il sito web permette di mettere i prodotti in un carrello per poterli poi ordinare \\
   \bottomrule
 \end{tabularx}
 
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Online order placing}} \\
+  \multicolumn{2}{l}{\textbf{Ordini online}} \\
   \midrule
-  \textbf{As} & a customer \\
-  \textbf{I want to} & order all the products in my cart \\
-  \textbf{so that} & I can buy cheese \\
+  \textbf{In quanto} & cliente \\
+  \textbf{vorrei} & poter fare un ordine con tutti i miei prodotti messi nel carrello \\
+  \textbf{così da} & comprare i formaggi di cui ho bisogno \\
   \midrule
-  \textbf{CoS} & There is a checkout button to order the products in my cart \\
+  \textbf{CoS} & C'è un pulsante per effettuare l'acquisto dei prodotti che ho messo nel carrello \\
   \bottomrule
 \end{tabularx}
 
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Multiple payment methods}} \\
+  \multicolumn{2}{l}{\textbf{Metodi di pagamento}} \\
   \midrule
-  \textbf{As} & a customer \\
-  \textbf{I want} & to be able to pay my order with different methods \\
-  \textbf{so that} & I can choose the most convenient one \\
+  \textbf{In quanto} & cliente \\
+  \textbf{vorrei} & poter scegliere fra più metodologie di pagamento \\
+  \textbf{così da} & scegliere quella che mi conviene di più \\
   \midrule
-  \textbf{CoS} & A customer can pay with wire transfer \\
-  & A customer can pay with cash on delivery \\
-  & A customer can pay with credit card \\
+  \textbf{CoS} & Un cliente può pagare con un bonifico \\
+  & Un cliente può pagare in contanti alla consegna \\
+  & Un cliente può pagare con una carta di credito \\
   \bottomrule
 \end{tabularx}
 
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Website user experience}} \\
+  \multicolumn{2}{l}{\textbf{User experience del sito}} \\
   \midrule
-  \textbf{As} & a customer \\
-  \textbf{I want} & the website to be easy to use and understand \\
-  \textbf{so that} & it's not difficult to place orders \\
+  \textbf{In quanto} & cliente \\
+  \textbf{vorrei} & che il sito fosse facile da utilizzare \\
+  \textbf{così da} & poter effettuare gli ordini senza difficoltà \\
   \midrule
-  \textbf{CoS} & The website respects the Nielsen Heuristics \\
-  & At least 90\% of the end users that tested the website mockup rated the experience as positive \\
+  \textbf{CoS} & Il sito rispetta le Euristiche di Nielsen \\
+  & Almeno il 90\% degli utenti finali che hanno testato i mockup del sito lo hanno valutato positivamente \\
   \bottomrule
 \end{tabularx}
 
-\section{Stocking}
+\section{Magazzino}
 \begin{tabularx}{\textwidth}{lX}
   \toprule
-  \multicolumn{2}{l}{\textbf{Automatic stock counting}} \\
+  \multicolumn{2}{l}{\textbf{Tracciamento delle disponibilità dei prodotti}} \\
   \midrule
-  \textbf{As} & an operator \\
-  \textbf{I want} & to see the stock levels of each product \\
-  \textbf{so that} & I know which products are available \\
+  \textbf{In quanto} & magazziniere \\
+  \textbf{vorrei} & vedere la disponibilità di ciascun prodotto in tempo reale \\
+  \textbf{così da} & sapere quali prodotti sono disponibili \\
   \midrule
-  \textbf{CoS} & The system automatically keeps track of the products availability and updates the stocking levels when a product is shipped to a customer \\
+  \textbf{CoS} & Il sistema tiene automaticamente traccia delle disponibilità di ciascun prodotto e le aggiorna mano a mano che i prodotti vengono tolti dal magazzino per essere spediti ai clienti \\
   \bottomrule
 \end{tabularx}
