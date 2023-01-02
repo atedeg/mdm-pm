@@ -1,180 +1,620 @@
 \chapter{User Stories}
 \label{app:user-stories}
+In seguito sono riportate le user stories definite in accordo con il committente. Le user stories sono state organizzate in iniziative (I) ed epiche (E).
+Ciascuna iniziativa fa riferimento ad un diverso bounded context e si compone di epiche e user stories; ciascuna user story è identificata da una sigla che indica l'iniziativa -- ed eventualmente l'epica -- a cui fa riferimento. Per esempio ``I1-E1-U2'' indica la seconda user story dell'epica E1 dell'iniziativa I1.
 
-\section{Pianificazione della produzione}
+\section*{I1: Pianificazione della produzione}
 
-\begin{tabularx}{\textwidth}{lX}
-\toprule
-\multicolumn{2}{l}{\textbf{Generazione del piano di produzione}} \\
-\midrule
-\textbf{In quanto} & Raffaella \\
-\textbf{vorrei} & generare automaticamente un piano di produzione per il giorno \\
-\textbf{così da} & ottimizzare l'utilizzo delle macchine per la produzione di formaggio durante la giornata \\
-\midrule
-\textbf{CoS} & Il piano di produzione è adeguato per soddisfare tutti gli ordini in tempo \\
-& Le macchine sono inattive per al massimo il 15\% del tempo \\
-\bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I1-E1} & \textbf{Generazione del piano di produzione} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & generare automaticamente un piano di produzione per il giorno \\
+    \textbf{così da} & ottimizzare l'utilizzo delle macchine per la produzione di formaggio durante la giornata \\
+    \midrule
+    \textbf{CoS} & Il piano di produzione è adeguato per soddisfare tutti gli ordini in tempo \\
+    & Le macchine sono inattive per al massimo il 15\% del tempo \\
+    \midrule
+    \textbf{Priorità} & 3 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i1-e1}
+\end{table}
 
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Visualizzazione del piano di produzione}} \\
-  \midrule
-  \textbf{In quanto} & Raffaella \\
-  \textbf{vorrei} & visualizzare il piano di produzione attuale \\
-  \textbf{così da} & conoscere ciò che è stato generato \\
-  \midrule
-  \textbf{CoS} & L'interfaccia è facile da usare e comprendere secondo le Euristiche di Nielsen~\cite{cit:nielsen} \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I1-E1-U1} & \textbf{Soddisfazione degli ordini nel piano di produzione generato} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & verificare che il piano di produzione generato soddisfi tutti gli ordini \\
+    \textbf{così da} & assicurarmi che tutti gli ordini possano essere evasi \\
+    \midrule
+    \textbf{CoS} & Il piano di produzione generato include la produzione di tutte le unità richieste dagli ordini nei tempi prescritti \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i1-e1-u1}
+\end{table}
 
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Modifica del piano di produzione}} \\
-  \midrule
-  \textbf{In quanto} & Raffaella \\
-  \textbf{vorrei} & modificare il piano di produzione generato per il giorno \\
-  \textbf{così da} & tenere conto di situazioni eccezionali che potrebbero verificarsi durante la giornata \\
-  \midrule
-  \textbf{CoS} & Il piano di produzione può essere modificato prima di essere approvato per la produzione \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I1-E1-U2} & \textbf{Ottimizzazione dell'utilizzo delle macchine} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & limitare il tempo di inattività delle macchine per la produzione di formaggio al 15\% o meno \\
+    \textbf{così da} & ottenere il massimo rendimento dall'utilizzo delle macchine \\
+    \midrule
+    \textbf{CoS} & Il piano di produzione generato include solo il tempo necessario per la produzione e le macchine sono inattive per al massimo il 15\% del tempo \\
+    \midrule
+    \textbf{Priorità} & 3 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i1-e1-u2}
+\end{table}
 
-\section{Ordini dei clienti}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I1-E2} & \textbf{Visualizzazione del piano di produzione} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & visualizzare il piano di produzione attuale \\
+    \textbf{così da} & conoscere ciò che è stato generato \\
+    \midrule
+    \textbf{CoS} & L'interfaccia è facile da usare e comprendere secondo le Euristiche di Nielsen~\cite{cit:nielsen} \\
+    \midrule
+    \textbf{Priorità} & 4 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i1-e2}
+\end{table}
 
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Prezzatura automatica}} \\
-  \midrule
-  \textbf{In quanto} & magazziniere \\
-  \textbf{vorrei} & che il sistema calcolasse automaticamente i prezzi degli ordini in entrata \\
-  \textbf{così da} & evitare di doverlo fare manualmente sfogliando l'elenco dei prezzi \\
-  \midrule
-  \textbf{CoS} & Il sistema calcola automaticamente i prezzi degli ordini in entrata utilizzando una versione digitale del listino prezzi attualmente in uso \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I1-E2-U1} & \textbf{Visualizzazione del volume di produzione pianificato} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & visualizzare il numero di unità pianificate per ogni prodotto \\
+    \textbf{così da} & conoscere il volume di produzione previsto \\
+    \midrule
+    \textbf{CoS} & L'interfaccia presenta una tabella con le informazioni sulla pianificazione delle unità di produzione per ogni prodotto \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i1-e2-u1}
+\end{table}
 
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Pallettizzazione automatica}} \\
-  \midrule
-  \textbf{In quanto} & magazziniere \\
-  \textbf{vorrei} & pallettizzare un prodotto per un ordine \\
-  \textbf{così da} & poter mettere da parte un prodotto per l'ordine di un cliente \\
-  \midrule
-  \textbf{CoS} & Il magazziniere può scansionare il codice a barre del prodotto con un palmare per contrassegnarlo come pallettizzato e aggiornare le forniture del magazzino \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I1-E2-U2} & \textbf{Visualizzazione del volume di produzione effettivo} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & visualizzare il numero di unità effettivamente prodotte per ogni prodotto \\
+    \textbf{così da} & confrontare il volume di produzione previsto con quello effettivo \\
+    \midrule
+    \textbf{CoS} & L'interfaccia presenta una tabella con le informazioni sulla produzione effettiva per ogni prodotto \\
+    \midrule
+    \textbf{Priorità} & 3 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i1-e2-u2}
+\end{table}
 
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Integrazione con il sistema di tracciabilità}} \\
-  \midrule
-  \textbf{In quanto} & magazziniere \\
-  \textbf{vorrei} & aggiungere automaticamente le informazioni del prodotto al sistema di tracciabilità quando lo pallettizzo per un ordine \\
-  \textbf{così da} & evitare di doverlo fare manualmente \\
-  \midrule
-  \textbf{CoS} & Il sistema aggiunge automaticamente le informazioni del prodotto al sistema di tracciabilità quando viene scansionato il suo codice per aggiungerlo a un ordine \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I1-E2-U3} & \textbf{Filtro nella visualizzazione del piano di produzione} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & filtrare la visualizzazione del piano di produzione in base alla data di pianificazione o di produzione \\
+    \textbf{così da} & analizzare il piano di produzione in un determinato periodo di tempo \\
+    \midrule
+    \textbf{CoS} & L'interfaccia presenta opzioni di filtraggio per la data di pianificazione o di produzione \\
+    \midrule
+    \textbf{Priorità} & 1 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i1-e2-u3}
+\end{table}
 
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Completare un ordine}} \\
-  \midrule
-  \textbf{In quanto} & magazziniere \\
-  \textbf{vorrei} & poter segnare un ordine come completo e pronto per essere spedito \\
-  \textbf{così da} & poterlo spedire al cliente \\
-  \midrule
-  \textbf{CoS} & L'operatore può segnare un ordine come completo sfruttando un palmare \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I1-U1} & \textbf{Modifica del piano di produzione} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & modificare il piano di produzione generato per il giorno \\
+    \textbf{così da} & tenere conto di situazioni eccezionali che potrebbero verificarsi durante la giornata \\
+    \midrule
+    \textbf{CoS} & Il piano di produzione può essere modificato prima di essere approvato per la produzione \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i1-u1}
+\end{table}
 
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Generazione automatica del DDT}} \\
-  \midrule
-  \textbf{In quanto} & magazziniere \\
-  \textbf{vorrei} & generare automaticamente un DDT per un ordine che è pronto per essere spedito \\
-  \textbf{così da} & non doverlo fare manualmente \\
-  \midrule
-  \textbf{CoS} & Il sistema raccoglie automaticamente informazioni sui prodotti contenuti nel pallet dell'ordine e permette di stampare il DDT scansionando l'ID del pallet con un tablet \\
-  \bottomrule
-\end{tabularx}
+\section*{I2: Ordini dei clienti}
 
-\subsection{Epic: Online Order Placing}
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Catalogo online}} \\
-  \midrule
-  \textbf{In quanto} & cliente \\
-  \textbf{vorrei} & sfogliare un catalogo online di tutti i prodotti disponibili \\
-  \textbf{così da} & scegliere cosa comprare \\
-  \midrule
-  \textbf{CoS} & C'è un sito web con un catalogo di tutti i prodotti disponibili \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-U1} & \textbf{Prezzatura automatica} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & che il sistema calcolasse automaticamente i prezzi degli ordini in entrata \\
+    \textbf{così da} & evitare di doverlo fare manualmente sfogliando l'elenco dei prezzi \\
+    \midrule
+    \textbf{CoS} & Il sistema calcola automaticamente i prezzi degli ordini in entrata utilizzando una versione digitale del listino prezzi attualmente in uso \\
+    \midrule
+    \textbf{Priorità} & 3 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-u1}
+\end{table}
 
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Carrello per gli acquisti online}} \\
-  \midrule
-  \textbf{In quanto} & cliente \\
-  \textbf{vorrei} & mettere i formaggi a cui sono interessato in un carrello \\
-  \textbf{così da} & poterli ordinare online \\
-  \midrule
-  \textbf{CoS} & Il sito web permette di mettere i prodotti in un carrello per poterli poi ordinare \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E1} & \textbf{Pallettizzazione automatica} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & pallettizzare un prodotto per un ordine \\
+    \textbf{così da} & poter mettere da parte un prodotto per l'ordine di un cliente \\
+    \midrule
+    \textbf{CoS} & Il magazziniere può scansionare il codice a barre del prodotto con un palmare per contrassegnarlo come pallettizzato e aggiornare le forniture del magazzino \\
+    \midrule
+    \textbf{Priorità} & 4 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e1}
+\end{table}
 
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Ordini online}} \\
-  \midrule
-  \textbf{In quanto} & cliente \\
-  \textbf{vorrei} & poter fare un ordine con tutti i miei prodotti messi nel carrello \\
-  \textbf{così da} & comprare i formaggi di cui ho bisogno \\
-  \midrule
-  \textbf{CoS} & C'è un pulsante per effettuare l'acquisto dei prodotti che ho messo nel carrello \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E1-U1} & \textbf{Contrassegnare il prodotto come pallettizzato} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & contrassegnare il prodotto come pallettizzato \\
+    \textbf{così da} & aggiornare le informazioni del magazzino e preparare il prodotto per l'ordine di un cliente \\
+    \midrule
+    \textbf{CoS} & È possibile interagire con il sistema segnalando la pallettizzazione di un prodotto \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e1-u1}
+\end{table}
 
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Metodi di pagamento}} \\
-  \midrule
-  \textbf{In quanto} & cliente \\
-  \textbf{vorrei} & poter scegliere fra più metodologie di pagamento \\
-  \textbf{così da} & scegliere quella che mi conviene di più \\
-  \midrule
-  \textbf{CoS} & Un cliente può pagare con un bonifico \\
-  & Un cliente può pagare in contanti alla consegna \\
-  & Un cliente può pagare con una carta di credito \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E1-U2} & \textbf{Scansione dei prodotti con un palmare} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & contrassegnare il prodotto come pallettizzato scansionandone il codice a barre tramite un palmare \\
+    \textbf{così da} & non dover inserire manualmente il codice del prodotto \\
+    \midrule
+    \textbf{CoS} & L'interfaccia del palmare permette di scansionare il codice a barre del prodotto e contrassegnarlo come pallettizzato \\
+    \midrule
+    \textbf{Priorità} & 4 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e1-u2}
+\end{table}
 
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{User experience del sito}} \\
-  \midrule
-  \textbf{In quanto} & cliente \\
-  \textbf{vorrei} & che il sito fosse facile da utilizzare \\
-  \textbf{così da} & poter effettuare gli ordini senza difficoltà \\
-  \midrule
-  \textbf{CoS} & Il sito rispetta le Euristiche di Nielsen \\
-  & Almeno il 90\% degli utenti finali che hanno testato i mockup del sito lo hanno valutato positivamente \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E1-U3} & \textbf{Aggiornamento delle forniture del magazzino} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & aggiornare le forniture del magazzino quando un prodotto viene pallettizzato \\
+    \textbf{così da} & tenere traccia della quantità di prodotto disponibile nel magazzino \\
+    \midrule
+    \textbf{CoS} & Quando un prodotto viene contrassegnato come pallettizzato, le informazioni del magazzino vengono aggiornate di conseguenza \\
+    \midrule
+    \textbf{Priorità} & 3 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e1-u3}
+\end{table}
 
-\section{Magazzino}
-\begin{tabularx}{\textwidth}{lX}
-  \toprule
-  \multicolumn{2}{l}{\textbf{Tracciamento delle disponibilità dei prodotti}} \\
-  \midrule
-  \textbf{In quanto} & magazziniere \\
-  \textbf{vorrei} & vedere la disponibilità di ciascun prodotto in tempo reale \\
-  \textbf{così da} & sapere quali prodotti sono disponibili \\
-  \midrule
-  \textbf{CoS} & Il sistema tiene automaticamente traccia delle disponibilità di ciascun prodotto e le aggiorna mano a mano che i prodotti vengono tolti dal magazzino per essere spediti ai clienti \\
-  \bottomrule
-\end{tabularx}
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E1-U4} & \textbf{Integrazione con il sistema di tracciabilità} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & aggiungere automaticamente le informazioni del prodotto al sistema di tracciabilità quando lo pallettizzo per un ordine \\
+    \textbf{così da} & evitare di doverlo fare manualmente \\
+    \midrule
+    \textbf{CoS} & Il sistema aggiunge automaticamente le informazioni del prodotto al sistema di tracciabilità quando viene scansionato il suo codice per aggiungerlo a un ordine \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e1-u4}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E2} & \textbf{Completare un ordine} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & poter segnare un ordine come completo e pronto per essere spedito \\
+    \textbf{così da} & poterlo spedire al cliente \\
+    \midrule
+    \textbf{CoS} & L'operatore può segnare un ordine come completo sfruttando un palmare \\
+    \midrule
+    \textbf{Priorità} & 3 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e2}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E2-U1} & \textbf{Segnare un ordine come completo} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & avere la possibilità di segnare un ordine come completo \\
+    \textbf{così da} & poterlo preparare per la spedizione al cliente \\
+    \midrule
+    \textbf{CoS} & È possibile interagire con il sistema per segnare un ordine come completo \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e2-u1}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E2-U2} & \textbf{Uso del palmare per segnare un ordine come completo} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & utilizzare un palmare per segnare un ordine come completo \\
+    \textbf{così da} & non dover inserire manualmente il codice dell'ordine per segnarlo come completo\\
+    \midrule
+    \textbf{CoS} & L'interfaccia del palmare permette di scansionare il codice dell'ordine per segnarlo come completo \\
+    \midrule
+    \textbf{Priorità} & 4 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e2-u2}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E3} & \textbf{Generazione e stampa del DDT} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & generare automaticamente un DDT per un ordine che è pronto per essere spedito \\
+    \textbf{così da} & non doverlo fare manualmente \\
+    \midrule
+    \textbf{CoS} & Il sistema raccoglie automaticamente informazioni sui prodotti contenuti nel pallet dell'ordine e permette di stampare il DDT scansionando l'ID del pallet con un tablet \\
+    \midrule
+    \textbf{Priorità} & 2 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e3}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E3-U1} & \textbf{Generazione automatica del DDT} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & generare automaticamente un DDT per un ordine pronto per la spedizione \\
+    \textbf{così da} & evitare il processo manuale di compilazione del DDT \\
+    \midrule
+    \textbf{CoS} & Il sistema raccoglie automaticamente informazioni sui prodotti contenuti nell'ordine e permette di generare il DDT automaticamente \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e3-u1}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E3-U2} & \textbf{Utilizzo di un tablet per stampare il DDT} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & utilizzare un tablet per stampare il DDT generato automaticamente per un ordine \\
+    \textbf{così da} & non dover inserire manualmente il codice dell'ordine per stamparne il DDT \\
+    \midrule
+    \textbf{CoS} & L'interfaccia del tablet permette di mandare in stampa il DDT generato automaticamente scansionando l'ID del pallet dell'ordine \\
+    \midrule
+    \textbf{Priorità} & 3 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e3-u2}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4} & \textbf{Piazzamento ordini online} \\
+    \midrule
+    \textbf{In quanto} & cliente \\
+    \textbf{vorrei} & poter sfruttare un portale di e-commerce per poter fare i miei acquisti \\
+    \textbf{così da} & scegliere ed acquistare i prodotti che mi servono \\
+    \midrule
+    \textbf{CoS} & C'è un sito web che permette di scegliere quali prodotti acquistare tramite un catalogo e offre la possibilità di scegliere diverse metodologie di pagamento \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4-U1} & \textbf{Creazione sito web di Mambelli} \\
+    \midrule
+    \textbf{In quanto} & cliente \\
+    \textbf{vorrei} & poter consultare il sito web del caseificio \\
+    \textbf{così da} & avere un unico portale da consultare al bisogno \\
+    \midrule
+    \textbf{CoS} & C'è un sito web minimale del caseificio \\ 
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4-u1}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4-U2} & \textbf{Grafica del sito web} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & che il nuovo sito mantenesse una grafica simile al precedente sito vetrina utilizzato dal caseificio \\
+    \textbf{così da} & mantenere uno stile coerente riconoscibile dai clienti \\
+    \midrule
+    \textbf{CoS} & Il nuovo sito realizzato riprende il linguaggio visuale adottato dal precedente sito vetrina \\ 
+    \midrule
+    \textbf{Priorità} & 1 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4-u2}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4-U3} & \textbf{Digitalizzazione del catalogo Mambelli} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & una versione digitale dell'attuale catalogo di Mambelli \\
+    \textbf{così da} & poter gestire con più facilità il catalogo dei prodotti del caseificio \\
+    \midrule
+    \textbf{CoS} & Il catalogo è salvato in una base di dati \\
+    \midrule
+    \textbf{Priorità} & 4 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4-u3}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4-U4} & \textbf{Modifica del catalogo Mambelli} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & poter modificare il catalogo dei prodotti \\
+    \textbf{così da} & poter aggiornare le descrizioni dei prodotti del caseificio o aggiungerne di nuovi qualora necessario \\
+    \midrule
+    \textbf{CoS} & C'è una semplice interfaccia che permette a Raffaella di modificare il catalogo memorizzato \\
+    \midrule
+    \textbf{Priorità} & 2 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4-u4}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4-U5} & \textbf{Visualizzazione del catalogo online} \\
+    \midrule
+    \textbf{In quanto} & cliente \\
+    \textbf{vorrei} & sfogliare un catalogo online di tutti i prodotti disponibili \\
+    \textbf{così da} & scegliere cosa comprare \\
+    \midrule
+    \textbf{CoS} & È possibile consultare nel sito web il catalogo di tutti i prodotti che possono essere acquistati presso il caseificio \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4-u5}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4-U6} & \textbf{Carrello per gli acquisti online} \\
+    \midrule
+    \textbf{In quanto} & cliente \\
+    \textbf{vorrei} & mettere i formaggi a cui sono interessato in un carrello \\
+    \textbf{così da} & poterli ordinare online \\
+    \midrule
+    \textbf{CoS} & Il sito web permette di mettere i prodotti in un carrello per poterli poi ordinare \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4-u6}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4-U7} & \textbf{Ordini online} \\
+    \midrule
+    \textbf{In quanto} & cliente \\
+    \textbf{vorrei} & poter fare un ordine con tutti i miei prodotti messi nel carrello \\
+    \textbf{così da} & comprare i formaggi di cui ho bisogno \\
+    \midrule
+    \textbf{CoS} & C'è un pulsante per effettuare l'acquisto dei prodotti che ho messo nel carrello \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4-u7}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4-U8} & \textbf{Metodi di pagamento} \\
+    \midrule
+    \textbf{In quanto} & cliente \\
+    \textbf{vorrei} & poter scegliere fra più metodologie di pagamento \\
+    \textbf{così da} & scegliere quella che mi conviene di più \\
+    \midrule
+    \textbf{CoS} & Un cliente può scegliere di pagare con un bonifico, in contanti alla consegna oppure tramite carta di credito \\
+    \midrule
+    \textbf{Priorità} & 5 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4-u8}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4-U9} & \textbf{Unificazione dell'e-commerce e del sito vetrina} \\
+    \midrule
+    \textbf{In quanto} & cliente \\
+    \textbf{vorrei} & un unico sito con informazioni sul caseificio e l'e-commerce \\
+    \textbf{così da} & non dover cambiare sito per piazzare i miei ordini una volta aver consultato la vetrina \\
+    \midrule
+    \textbf{CoS} & Il sito web realizzato per l'e-commerce contiene anche varie informazioni sul caseificio \\ 
+    \midrule
+    \textbf{Priorità} & 3 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4-u9}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4-U10} & \textbf{Sito web sempre disponibile} \\
+    \midrule
+    \textbf{In quanto} & Raffaella \\
+    \textbf{vorrei} & che il sito fosse sempre raggiungibile senza disservizi \\
+    \textbf{così da} & non spingere i clienti verso la concorrenza se dovessero trovare il sito offline \\
+    \midrule
+    \textbf{CoS} & L'infrastruttura è sufficiente a gestire il flusso di clienti del caseificio \\
+    & Il sito web è disponibile nel 99\% del tempo in un anno \\
+    \midrule
+    \textbf{Priorità} & 4 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4-u10}
+\end{table}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I2-E4-U11} & \textbf{User experience del sito} \\
+    \midrule
+    \textbf{In quanto} & cliente \\
+    \textbf{vorrei} & che il sito fosse facile da utilizzare \\
+    \textbf{così da} & poter effettuare gli ordini senza difficoltà \\
+    \midrule
+    \textbf{CoS} & Il sito rispetta le Euristiche di Nielsen \\
+    & Almeno il 90\% degli utenti finali che hanno testato i mockup del sito lo hanno valutato positivamente \\
+    \midrule
+    \textbf{Priorità} & 3 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i2-e4-u11}
+\end{table}
+
+\section*{I3: Gestione del magazzino}
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I3-U1} & \textbf{Tracciamento automatico della disponibilità dei prodotti} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & che il sistema tenga traccia automaticamente della disponibilità dei prodotti \\
+    \textbf{così da} & non doverlo fare manualmente \\
+    \midrule
+    \textbf{CoS} & Il sistema tiene automaticamente traccia delle disponibilità di ciascun prodotto e le aggiorna mano a mano che i prodotti vengono tolti dal magazzino per essere spediti ai clienti \\
+    \midrule
+    \textbf{Priorità} & 3 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i3-u1}
+\end{table}
+
+
+\begin{table}[H]
+  \begin{tabularx}{\textwidth}{lX}
+    \toprule
+    \textbf{I3-U2} & \textbf{Visualizzazione della disponibilità dei prodotti} \\
+    \midrule
+    \textbf{In quanto} & magazziniere \\
+    \textbf{vorrei} & avere la possibilità di visualizzare la disponibilità di ciascun prodotto \\
+    \textbf{così da} & sapere quali prodotti sono disponibili \\
+    \midrule
+    \textbf{CoS} & L'interfaccia permette di visualizzare la disponibilità di ciascun prodotto in tempo reale \\
+    \midrule
+    \textbf{Priorità} & 3 \\
+    \textbf{Story points} & 10 \\
+    \bottomrule
+  \end{tabularx}
+  \label{user-story:i3-u2}
+\end{table}
