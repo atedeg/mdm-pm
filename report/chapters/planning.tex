@@ -1,15 +1,18 @@
 \chapter{Planning}\label{ch:planning}
 
 \section{Joint Project Planning Session}\label{sec:JPPS}
-\todo[inline]{Dire quante ne abbiamo fatte, molto probabilmente saranno più di una}
+Complessivamente si sono svolte tre riunioni di \emph{Joint Project Planning} con il committente. In seguito sono riportati i partecipanti delle riunioni e ciò che è stato deciso opportunamente motivato.
 
 \subsection{Partecipanti}
-\todo[inline]{descrivere i partecipanti}
 \begin{itemize}
-  \item \todo[inline]{tutto il team di atedeg}
+  \item I membri del core team di Atedeg che hanno già preso parte alle riunioni precedenti: Giacomo, Linda (facilitatore e product owner), Nicolas e Nicolò
+  \item Un altro sviluppatore di Atedeg
+  \item Raffaella (project sponsor e process owner dei processi relativi alla pianificazione della produzione)
+  \item Gianluca (process owner dei processi aziendali relativi a gestione ordini e magazzino)
+  \item Simone (process owner dei processi aziendali relativi alla produzione)
 \end{itemize}
 
-\subsection{Kick off}
+\subsection{Kick-off}
 La prima riunione si avvia con la presentazione dei partecipanti e un breve riassunto di quanto discusso nelle riunioni precedenti. In particolare Raffaella ha spiegato come il progetto si inserisce nella strategia aziendale e quali sono gli obiettivi che si prefigge: efficientare il processo di gestione degli ordini e automatizzare la pianificazione della produzione aumentando la produttività dei macchinari del caseificio.
 Dopodiché è avvenuta la presentazione del team di Atedeg.
 
@@ -25,19 +28,25 @@ Per quanto riguarda i requisiti, il team ha deciso di assegnare insieme al commi
 La stessa scala di priorità è stata usata anche per prioritizzare le user story all'interno della loro rispettiva epoca.
 Vista l'esigenza del committente di avere un sistema (anche minimo) che permettesse di raccogliere e gestire gli ordini entro settembre, si è deciso di comune accordo di dare la massima priorità all'epica \href{user-story:i2-e4}{I2-E4}, con le altre correlate a seguire.
 
-\subsubsection{Stima della quantità di lavoro}
+\subsubsection{Stima delle risorse}
 La quantità di lavoro di ciascuna user story è stata stimata assegnandovi un valore scalare adimensionale: gli \emph{story points}.
-Per stimare gli story points è stato usato il metodo \emph{Delphi}: questa tecnica consiste nel chiedere a ciascun membro del team di stimare la quantità di lavoro di una user story, e poi di fare dei nuovi round tenendo conto delle stime e motivazioni degli altri membri del team. Questo procedimento viene ripetuto finché non si converge a un risultato comune o non si raggiunge un numero di round prefissato.
+Per assegnare gli story points è stato usato il metodo \emph{Delphi}: questa tecnica consiste nel chiedere a ciascun membro del team di stimare la quantità di lavoro di una user story, e poi di fare dei nuovi round tenendo conto delle stime e motivazioni degli altri membri del team. Questo procedimento viene ripetuto finché non si converge a un risultato comune o non si raggiunge un numero di round prefissato.
 In caso di mancata convergenza, si è deciso di usare la media delle stime come valore finale.
 
-Inoltre, non è stato immediatamente realizzato il \emph{project network diagram} per non imporre una linearizzazione nello sviluppo del progetto che essenzialmente avrebbe fatto perdere i vantaggi nell'utilizzare Scrum. Per questo motivo, si è stabilito di realizzare uno \emph{sprint network diagram} all'inizio di ciascuno sprint per poter permettere al project manager di pianificare al meglio l'uso delle risorse e dei tempi al suo interno.
+Indicativamente un punteggio di 5-6 story points indica una user story semplice che può essere completata in un paio di giornate lavorative, mentre un punteggio superiore indica user story più complesse che potenzialmente potrebbero richiedere anche l'intero sprint; un esempio di tale user story è la \href{user-story:i1-e1-u1}{I1-E1-U1}.
+
+Una volta stimata la complessità delle user stories è stata adottata nuovamente la Delphi technique per stimare il numero di persone ideale da assegnare a ciascuna storia. Per farlo si è tenuto in considerazione quanto ciascun task potesse essere parallelizzabile cercando di assegnare più sviluppatori a user story complesse.
+
+Infine, non è stato immediatamente realizzato il \emph{project network diagram} per non imporre una linearizzazione nello sviluppo del progetto che essenzialmente avrebbe fatto perdere i vantaggi nell'utilizzare Scrum. Per questo motivo, si è stabilito di realizzare uno \emph{sprint network diagram} all'inizio di ciascuno sprint per poter permettere al project manager di pianificare al meglio l'uso delle risorse e dei tempi al suo interno.
 
 \subsubsection{Analisi dei rischi}
 In seguito sono stati analizzati in dettaglio i rischi riportati nel POS; in particolare, per ciascuno è stata stabilità la probabilità che si verifichi, l'impatto ed eventuali strategie di mitigazione. Il documento risultante è riportato in \Cref{app:analisi-rischi}.
 
-- Working session
-  - rischi e piani di mitigazione 
-    - possibili assenze di membri del team
-    - un membro del team scompare per la conferenza
-  - Consenso
+\subsubsection{Gestione del cash flow}
+Per stimare i costi del progetto il team fa affidamento alla propria esperienza con progetti passati. Infatti, avendo già esperienza con la realizzazione di portali e-commerce e gestionali il team ha stimato di poter concludere il progetto in 4 sprint di due settimane ciascuno. D'altro canto la porzione relativa all'integrazione e alla pianificazione della produzione rappresentano la complessità maggiore e si è stimato che possano impiegare 2 interi sprint. 
+Quindi, nelle stime riportate al cliente viene data come durata indicativa del progetto 6 sprint, rendendo comunque chiaro il fatto che il progetto potrebbe richiedere più tempo per essere terminato.
 
+Ogni dipendente di Atedeg viene pagato \EUR{25} l'ora e la settimana lavorativa è di 32 ore. Per terminare il progetto nei limiti prestabiliti si è scelto di assegnarvi 5 sviluppatori full-time. Dunque, ciascuno sprint avrà un costo di \EUR{8\,500} (tenendo conto anche dei costi delle utenze e delle licenze software) e il progetto complessivamente potrebbe costare indicativamente \EUR{51\,000}.
+
+Il committente ha accettato il progetto con un contratto a corpo dove, al termine di ogni sprint di due settimane viene corrisposta la cifra di \EUR{8\,500}.
+Inoltre, il committente ha accettato di pagare un anticipo di \EUR{4\,000} per coprire i costi di avvio del progetto.
