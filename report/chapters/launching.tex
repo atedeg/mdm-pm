@@ -24,8 +24,6 @@ I membri del team sono ``persone fatte a T'': con questo termine si indica una p
   \label{fig:croce}
 \end{figure}
 
-\todo[inline]{Decidere se fare o meno il Project Definition Statement}
-
 \section{Definizione delle regole operative}
 \subsection{Project meeting}
 È stata definita la gamma di possibili meeting a cui il team dovrà partecipare, la loro durata e cadenza.
@@ -78,4 +76,12 @@ Si è stabilito che le comunicazioni debbano avvenire secondo le seguenti modali
   \item Riunioni: preferibilmente in presenza, sia presso il caseificio Mambelli che la sede di Atedeg. In caso di impossibilità di svolgimento in presenza si è scelto di adottare Zoom come strumento per le riunioni in remoto
 \end{itemize}
 
-
+\subsubsection{Controllo della qualità}
+Il team di sviluppo ha deciso di avvalersi di diverse metodologie di controllo della qualità del prodotto realizzato:
+\begin{itemize}
+  \item \emph{Test-Driven Development:} il team di sviluppo ha deciso di adottare questa metodologia per garantire che il codice scritto sia di qualità. In particolare, prima di implementare qualunque funzionalità si devono scrivere i test che ne verifichino il corretto funzionamento. In questo modo è possibile costruire una robusta suite di test da eseguire prima delle consegne e qualora venga effettuato refactoring per avere un buon livello di sicurezza sul corretto funzionamento del codice
+  \item \emph{Code review:} prima di effettuare il merge di codice sul branch principale è necessario che venga revisionato da almeno un altro membro del team di sviluppo per verificare che il codice sia di qualità e possa essere integrato nel branch principale senza problemi
+  \item \emph{Continuous Integration:} grazie alla suddivisione in branch e il corretto uso del DVCS è possibile garantire che il codice presente sul branch principale sia sempre correttamente funzionante
+  \item \emph{Continuous Deployment:} una volta superati i controlli automatici della CI, viene effettuato un deployment automatico per assicurarsi che il cliente abbia sempre l'ultima versione disponibile del software
+  \item \emph{User focus group:} per verificare la qualità delle interfacce realizzate sono state organizzate alcune sedute di focus group con utenti finali del software. Questi hanno potuto provare le interfacce e compilare questionari con le proprie osservazioni a riguardo. In questo modo è stato possibile integrare le richieste dei diretti interessati nella realizzazione di un portale web piacevole da utilizzare
+\end{itemize}
