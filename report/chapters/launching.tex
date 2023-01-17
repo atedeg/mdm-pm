@@ -14,7 +14,7 @@ I membri del team sono ``persone fatte a T'': con questo termine si indica una p
   \item Nicolò (\emph{converging}): è esperto nella progettazione, training e valutazione di sistemi di machine learning
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[htp]
   \centering
   \begin{tikzpicture}
     \draw[line width=30pt] (0,0) -- (0,4) node [midway, rotate=90, color=white] {conoscenze};  % linea verticale
@@ -29,7 +29,7 @@ I membri del team sono ``persone fatte a T'': con questo termine si indica una p
 È stata definita la gamma di possibili meeting a cui il team dovrà partecipare, la loro durata e cadenza.
 
 \subsubsection{Standup meeting}
-Gli \emph{standup meeting} si svolgono con cadenza giornaliera e non impiegano più di 10 minuti. Questi meeting coinvolgono tutti i membri in piedi ogni mattina prima di iniziare la giornata.
+Gli \emph{standup meeting} si svolgono con cadenza giornaliera e non impiegano più di 10 minuti. Questi meeting coinvolgono tutti i membri che si incontrano la mattina davanti alla macchinetta del caffè.
 Questi si svolgono in maniera informale e non hanno una scaletta esplicita: i membri del team di sviluppo discutono su ciò che stanno facendo e presentano gli eventuali problemi riscontrati.
 Nel caso in cui siano presenti problemi che impediscano di proseguire con lo sviluppo, il team si riunirà in un \emph{problem resolution meeting} per discutere più nel dettaglio del problema.
 
@@ -43,22 +43,22 @@ I problem resolution meeting vengono indetti in maniera straordinaria qualora du
 \end{itemize}
 
 \subsubsection{Sprint review e gestione del cambiamento di scope}
-Il venerdì, al termine di ogni sprint, si svolge una riunione di \emph{sprint review} in cui il team presenta il lavoro svolto durante lo sprint. Alla riunione partecipano tutti i membri del team di sviluppo, il product owner, Raffaella (in quanto project sponsor) ed eventuali process owner lato cliente interessati ai risultati dello sprint.
+Il venerdì, al termine di ogni sprint, si svolge una riunione di \emph{sprint review} in cui il team presenta il lavoro svolto durante le due settimane. Alla riunione partecipano tutti i membri del team di sviluppo, il product owner, Raffaella (in quanto project sponsor) ed eventuali process owner lato cliente interessati ai risultati dello sprint.
 Durante la riunione il team di sviluppo riceve feedback da parte del cliente mostrando le funzionalità implementate. Questo è anche un importante momento per mostrare eventuali \emph{mockup} per chiarire requisiti incerti.
 Indicativamente queste riunioni impiegano da una a due ore a seconda del numero di user story implementate durante lo sprint.
 
-Qualora dovessero emergere nuove richieste del committente o proposte di cambiamento di scope durante la fase di review la riunione potrebbe essere integrata con una fase in cui vengono discusse le nuove user story con il cliente, approvate e inserite nel product backlog secondo le metodologie già descritte nella fase di planning.
+Durante la review potrebbero emergere nuove richieste o proposte di cambiamento di scope da parte del  committente. In tal caso la riunione potrebbe essere integrata con una fase in cui vengono discusse le nuove user story con il cliente, approvate e inserite nel product backlog secondo le metodologie già descritte nella fase di planning.
 
 \subsubsection{Sprint retrospective}
-Dopo ogni riunione di sprint review, il team di sviluppo si riunisce per un'ulteriore riunione di \emph{sprint retrospective}. Lo scopo di questa riunione è quello di analizzare il lavoro svolto durante lo sprint, cosa è andato bene, eventuali problematiche emerse e di discutere su come migliorare il processo di sviluppo.
+Dopo ogni sprint review, il team di sviluppo si riunisce per un'ulteriore riunione di \emph{sprint retrospective}. Il suo scopo è quello di analizzare il lavoro svolto durante lo sprint, cosa è andato bene, eventuali problematiche emerse e di discutere su come migliorare il processo di sviluppo.
 La durata di queste riunioni è indicativamente di 30 minuti.
 
 \subsubsection{Sprint planning}
-Si è fissata come data per le riunioni di \emph{sprint planning} il lunedì mattina all'inizio di ogni nuovo sprint. Durante queste riunioni il team di sviluppo si riunisce con il product owner per discutere delle user story da implementare durante lo sprint. Il ruolo del product owner è guidare il team nella scelta delle user story che forniscano il massimo valore possibile al cliente. Un fattore fondamentale nella scelta delle user story -- oltre al valore percepito dal cliente -- sono gli story points: infatti, si vuole che ogni sprint abbia un numero di story points adeguato alle risorse a disposizione e che lasci un margine di tempo libero per eventuali imprevisti.
+Si è fissata come data per le riunioni di \emph{sprint planning} il lunedì mattina all'inizio di ogni nuovo sprint. Durante queste riunioni il team di sviluppo si riunisce con il product owner per discutere delle user story da implementare nelle due settimane successive. Il ruolo del product owner è guidare il team nella scelta delle user story che forniscano il massimo valore possibile al cliente. Un fattore fondamentale nella scelta delle user story -- oltre al valore percepito dal cliente -- sono gli story points: infatti, si vuole che ogni sprint abbia un numero di story points adeguato alle risorse a disposizione e che lasci un margine di tempo libero per eventuali imprevisti.
 
-Una volte scelte le user story, il team discute di come implementarle e di quali task sono necessari per completarle; una volta avvenuta la scomposizione, i task sono inseriti nello \emph{sprint backlog} e ne viene stimato l'effort utilizzando lo stesso metodo adottato per la stima degli story point.
+Una volta scelte le user story, il team discute di come implementarle e di quali task sono necessari per completarle; una volta avvenuta la scomposizione, i task sono inseriti nello \emph{sprint backlog} e ne viene stimato l'effort utilizzando lo stesso metodo adottato per la stima degli story point.
 
-Il monitoraggio dei vari elementi contenuti nello sprint backlog permetterà di avere un controllo più fine sull'andamento dello sprint permettendo la realizzazione di uno \emph{sprint burndown chart}. Questo diagramma ha un ruolo fondamentale nel monitoraggio dell'andamento dello sprint e permette di capire se sono presenti eventuali ritardi nel completamento dei task e se lo sprint potrà essere completato entro i tempi previsti.
+Il monitoraggio dei vari elementi contenuti nello sprint backlog permetterà di avere un controllo più fine sull'andamento dello sprint permettendo la realizzazione di uno \emph{sprint burndown chart}. Questo diagramma ha un ruolo fondamentale nel monitoraggio dell'andamento dello sprint e permette di capire se sono presenti eventuali ritardi nel completamento dei task e se potrà essere completato entro i tempi previsti.
 
 Infine, ogni programmatore si assegna i task che intende implementare durante lo sprint in base alle proprie competenze.
 
